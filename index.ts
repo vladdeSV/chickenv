@@ -6,7 +6,7 @@ interface Chicken {
 
 const chicken: Chicken = {
   check: <T extends string>(dict: Record<string, unknown>, keys: T[]): Record<T, string> => {
-    const out: Record<T, string> = {} as any
+    const out: Record<T, string> = <Record<T, string>>{}
 
     for (const key of keys) {
       const value = dict[key]
