@@ -1,6 +1,5 @@
 interface Chicken {
   check: <T extends string>(dict: Record<string, unknown>, keys: T[]) => Record<T, string>,
-  validate: <T extends string>(dict: Record<string, unknown>, keys: T[]) => Record<T, string> | undefined,
   assert: <T extends string>(dict: Record<string, unknown>, keys: T[]) => asserts dict is Record<T, string>
 }
 
@@ -18,14 +17,6 @@ const chicken: Chicken = {
     }
 
     return out
-  },
-
-  validate: <T extends string>(dict: Record<string, unknown>, keys: T[]): Record<T, string> | undefined => {
-    try {
-      return chicken.check(dict, keys)
-    } catch {
-      return undefined
-    }
   },
 
   assert: <T extends string>(dict: Record<string, unknown>, keys: T[]): asserts dict is Record<T, string> => {

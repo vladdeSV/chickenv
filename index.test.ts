@@ -15,20 +15,6 @@ describe('basic usage', () => {
       .toThrow()
   })
 
-  test('validate', () => {
-    expect(chicken.validate({}, []))
-      .toEqual({})
-
-    expect(chicken.validate({ foo: 'a', bar: 'b' }, []))
-      .toEqual({})
-
-    expect(chicken.validate({ foo: 'a', bar: 'b' }, ['foo', 'bar']))
-      .toEqual({ foo: 'a', bar: 'b' })
-
-    expect(chicken.validate({ foo: 'a', bar: 'b' }, ['foo', 'bar', 'baz']))
-      .toBeUndefined()
-  })
-
   test('assert', () => {
     const processEnv1 = {} as NodeJS.ProcessEnv
     expect(() => chicken.assert(processEnv1, []))
