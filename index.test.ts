@@ -1,4 +1,5 @@
-import chicken from './index'
+import chick from './index'
+import { expect, test, describe } from 'bun:test'
 
 describe('basic usage', () => {
   test('check', () => {
