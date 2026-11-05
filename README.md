@@ -1,4 +1,5 @@
-> **⚠️ This package is no longer maintained.** Please use [envalid](https://www.npmjs.com/package/envalid) instead.
+> [!WARNING]
+> This package is no longer maintained. Please use [af/envalid](https://github.com/af/envalid) instead.
 
 # 🐥env, 🐔v
 Ensure environment variables are set at both runtime and compile-time. TypeScript users benefit from auto-completion of variables.
