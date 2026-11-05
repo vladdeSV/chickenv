@@ -1,10 +1,12 @@
+> **⚠️ This package is no longer maintained.** Please use [envalid](https://www.npmjs.com/package/envalid) instead.
+
 # 🐥env, 🐔v
 Ensure environment variables are set at both runtime and compile-time. TypeScript users benefit from auto-completion of variables.
 
 ## Installation
 
 ```sh
-$ yarn add chickenv
+$ <package manager> add chickenv
 ```
 
 ## Examples 
@@ -30,9 +32,6 @@ chicken.assert(process.env, ['FOO', 'BAR', 'BAZ'])
 
 process.env.FOO
 ```
-
-## Need more?
-If you need more advanced features, you should probably take a look at other libraries, such as [runtypes](https://github.com/pelotom/runtypes).
 
 ## Pronunciation
 > Art is in the eye of the beholder
